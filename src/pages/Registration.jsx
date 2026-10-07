@@ -80,10 +80,10 @@ export default function Registration() {
           Important Dates
         </h2>
         <ul className="mt-4 list-disc pl-6 space-y-2">
-          <li>Paper Submission Last Date: 31st October, 2025</li>
-          <li>Notification of Acceptance: 15th November, 2025</li>
-          <li>Authors Registration Deadline: 30th November, 2025</li>
-          <li>Conference Dates: 22–24, December, 2025</li>
+          <li>Paper Submission Last Date: 10th December, 2026</li>
+          <li>Notification of Acceptance: 15th December, 2026</li>
+          <li>Authors Registration Deadline: 20th December, 2026</li>
+          <li>Conference Dates: 24–26, December, 2026 (25th Excluded)</li>
         </ul>
       </div>
       <br />

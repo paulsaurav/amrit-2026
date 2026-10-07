@@ -7,7 +7,7 @@ import Gallery from "../components/Gallery";
 import AboutConference from "../components/AboutConference";
 import HomepageOtherDetails from "../components/HomepageOtherDetails";
 import Venue from "../components/Venue";
-import Sponsors from "../components/Sponsors";
+// import Sponsors from "../components/Sponsors";
 import CMT from "../components/CMT";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
@@ -18,13 +18,13 @@ const Home = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Amrit-2025|Amrit Conferences</title>
-        <link rel="canonical" href="https://amrit2025.amritconferences.in/" />
+        <title>Amrit-2026|Amrit Conferences</title>
+        <link rel="canonical" href="https://amrit2026.amritconferences.in/" />
         <meta
-          name="3rd INTERNATIONAL CONFERENCE ON
+          name="4th INTERNATIONAL CONFERENCE ON
 ADVANCED COMPUTING, MACHINE LEARNING,
 ROBOTICS AND INTERNET TECHNOLOGIES"
-          content="Amrit-2025 Conference"
+          content="Amrit-2026 Conference"
         />
       </Helmet>
       <Marquee />
@@ -36,7 +36,7 @@ ROBOTICS AND INTERNET TECHNOLOGIES"
       <AboutConference />
       <HomepageOtherDetails />
       <Venue />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <CMT />
       <Footer />
     </>

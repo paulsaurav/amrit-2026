@@ -9,15 +9,15 @@ const Footer = () => {
         <aside>
           <img
             src="/amrit-logo.png"
-            alt="AMRIT 2025 Logo"
+            alt="AMRIT 2026 Logo"
             height={100}
             width={100}
             className="mb-2"
           />
           <p className="text-sm">
-            <strong>AMRIT 2025</strong>
+            <strong>AMRIT 2026</strong>
             <br />
-            Assam University, Silchar & Diphu
+            Assam University, Silchar
           </p>
         </aside>
 

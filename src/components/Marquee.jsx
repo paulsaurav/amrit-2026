@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 const items = [
   " Paper submission is open",
-  " Registration closes Nov 30, 2025",
-  " Camera-ready deadline Dec 10, 2025",
-  " Conference: Dec 22–24, 2025 (Assam University, Silchar, Diphu)",
+  " Paper submission closes Dec 10, 2026",
+  " Registration closes Dec 20, 2026",
+  " Conference: Dec 24–26, 2026 (25th Excluded) (Assam University, Silchar)",
 ];
 
 export default function Marquee() {

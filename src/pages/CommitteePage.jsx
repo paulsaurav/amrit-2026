@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
+/* Committee members for AMRIT-2025, kept for reference until the 2026 committee is announced.
 const people = [
   {
     role: "Chief Patron",
@@ -41,7 +42,9 @@ const people = [
     profileHref: "#",
   },
 ];
+*/
 
+/* Committee members for AMRIT-2025, kept for reference until the 2026 committee is announced.
 const lists = {
   technicalChairs: [
     "Prof. Ranjit Singha, AUDC",
@@ -154,6 +157,7 @@ const lists = {
     "Dr. R. Chawngsangpuii, MZU",
   ],
 };
+*/
 
 function RoleLine({ role }) {
   return (
@@ -241,20 +245,25 @@ export default function CommitteePage() {
   </h1>
 </div>
       <div className="max-w-6xl mx-auto px-4">
-        {/* Leadership */}
+        <p className="text-lg md:text-xl font-semibold">To be updated</p>
+
+        {/* Committee members for AMRIT-2025, kept for reference until the 2026
+            committee is announced. Inner JSX comment markers were demoted to
+            plain labels so this stays a single comment.
+        Leadership
         <div className="space-y-12">
           {people.map((p) => (
             <LeaderItem key={p.role} p={p} />
           ))}
         </div>
 
-        {/* Row 1: Technical + Publicity */}
+        Row 1: Technical + Publicity
         <div className="grid md:grid-cols-2 gap-12 mt-16">
           <ListBlock title="Technical Chairs" items={lists.technicalChairs} />
           <ListBlock title="Publicity Chairs" items={lists.publicityChairs} />
         </div>
 
-        {/* Row 2: Local + Joint */}
+        Row 2: Local + Joint
         <div className="grid md:grid-cols-2 gap-12 mt-16">
           <ListBlock
             title="Local Organising Members"
@@ -266,7 +275,7 @@ export default function CommitteePage() {
           />
         </div>
 
-        {/* Row 3: International Advisory → 1 col center */}
+        Row 3: International Advisory → 1 col center
         <div className="mt-16">
           <ListBlock
             title="International Advisory Committee"
@@ -275,7 +284,7 @@ export default function CommitteePage() {
           />
         </div>
 
-        {/* Row 4: National Advisory → 2 col center */}
+        Row 4: National Advisory → 2 col center
         <div className="mt-16">
           <TwoColList
             title="National Advisory Committee"
@@ -283,13 +292,14 @@ export default function CommitteePage() {
           />
         </div>
 
-        {/* Row 5: Technical Programme → 2 col center */}
+        Row 5: Technical Programme → 2 col center
         <div className="mt-16">
           <TwoColList
             title="Technical Programme Committee"
             items={lists.tpc}
           />
         </div>
+        */}
       </div>
       <br /><br />
       <Footer />

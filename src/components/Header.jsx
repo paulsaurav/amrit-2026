@@ -51,7 +51,7 @@ export default function Header() {
           <div className="shrink-0">
             <img
               src={amrit}
-              alt="AMRIT 2025"
+              alt="AMRIT 2026"
               width={64}
               height={64}
               className="h-16 w-auto"

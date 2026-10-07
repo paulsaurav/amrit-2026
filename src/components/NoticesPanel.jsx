@@ -1,6 +1,8 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
+// import React, { useEffect, useMemo, useState } from "react";
 
 /** Helper: Contentful fetch + asset resolution */
+/* Contentful-backed notices, kept for reference until the 2026 notices are published.
 async function fetchNotices() {
   const space = "j7dpw7o71s1p";
   const token = "w3ny8pL3PkOOaOI8jfxtNActyRNudriMrst88fRsCr8";
@@ -49,6 +51,7 @@ async function fetchNotices() {
 
   return notices;
 }
+*/
 
 /** Preview renderer for different mime types */
 function Preview({ url, contentType }) {
@@ -135,6 +138,7 @@ function NoticeModal({ open, onClose, notice }) {
 
 /** The panel styled like your second screenshot */
 export default function NoticesPanel() {
+  /* Contentful-backed notices, kept for reference until the 2026 notices are published.
   const [notices, setNotices] = useState(null);
   const [error, setError] = useState("");
   const [active, setActive] = useState(null);
@@ -153,6 +157,7 @@ export default function NoticesPanel() {
   }, []);
 
   const empty = useMemo(() => (Array.isArray(notices) && notices.length === 0), [notices]);
+  */
 
   return (
     <div className="w-full">
@@ -167,7 +172,12 @@ export default function NoticesPanel() {
 
         {/* Body */}
         <div className="p-2">
-          {/* Loading / error / empty states */}
+          <p className="px-4 py-6 text-lg font-semibold text-gray-900">
+            To be updated
+          </p>
+
+          {/* Contentful-backed notices, kept for reference until the 2026 notices are published.
+          Loading / error / empty states
           {!notices && !error && (
             <div className="p-4">
               <div className="skeleton h-4 w-2/3 mb-2"></div>
@@ -182,7 +192,7 @@ export default function NoticesPanel() {
             <div className="p-4 text-black/70">No announcements yet.</div>
           )}
 
-          {/* List */}
+          List
           <ul className="divide-y divide-black/5">
             {notices?.map((n) => (
               <li key={n.id}>
@@ -190,7 +200,7 @@ export default function NoticesPanel() {
                   className="w-full text-left px-4 py-3 hover:bg-black/5 flex items-start gap-3"
                   onClick={() => setActive(n)}
                 >
-                  {/* doc icon */}
+                  doc icon
                   <span className="mt-1 text-blue-600">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2V8z"/><path d="M14 2v6h6"/></svg>
                   </span>
@@ -199,22 +209,25 @@ export default function NoticesPanel() {
                     <div className="text-sm text-black/60">Click to view</div>
                   </div>
                   <span className="text-black/40 mt-1">
-                    {/* chevron */}
+                    chevron
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"/></svg>
                   </span>
                 </button>
               </li>
             ))}
           </ul>
+          */}
         </div>
       </div>
 
       {/* Modal */}
+      {/* Contentful-backed notices, kept for reference until the 2026 notices are published.
       <NoticeModal
         open={!!active}
         onClose={() => setActive(null)}
         notice={active}
       />
+      */}
     </div>
   );
 }

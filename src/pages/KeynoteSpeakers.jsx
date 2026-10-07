@@ -100,11 +100,18 @@ export default function KeynoteSpeakers() {
         </div>
 
         {/* Speakers Grid */}
+        <p className="text-center text-lg md:text-xl font-semibold text-slate-800">
+          To be updated
+        </p>
+
+        {/* AMRIT-2025 speakers, kept for reference until the 2026 line-up is
+            confirmed. Inner JSX comment markers were demoted to plain labels so
+            this stays a single comment.
         <div className="grid grid-cols-1 gap-10">
           {SPEAKERS.map((speaker, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100">
               <div className="flex flex-col md:flex-row">
-                {/* Speaker Image */}
+                Speaker Image
                 <div className="md:w-2/5 relative group">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-l-xl"></div>
                   <div className="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">
@@ -117,7 +124,7 @@ export default function KeynoteSpeakers() {
                   />
                 </div>
                 
-                {/* Speaker Details */}
+                Speaker Details
                 <div className="md:w-3/5 p-7 md:p-8">
                   <h2 className="text-2xl md:text-2xl font-bold text-slate-800 mb-2.5 tracking-tight">
                     {speaker.name}
@@ -155,7 +162,8 @@ export default function KeynoteSpeakers() {
             </div>
           ))}
         </div>
-        
+        */}
+
         {/* Subtle Call-to-Action */}
         <div className="text-center mt-16 p-6 bg-white rounded-xl shadow-sm border border-gray-100">
           <h3 className="text-xl font-semibold text-slate-800 mb-2">Interested in Attending?</h3>

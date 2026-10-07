@@ -3,13 +3,18 @@ import Header from "../components/Header";
 
 export default function Schedule() {
   return (
-    <section className="bg-white text-black">
+    <section className="min-h-screen flex flex-col bg-white text-black">
       <Header />
-      <div className="mx-auto w-full max-w-[1050px] px-4 mt-14">
+      <div className="flex-1 mx-auto w-full max-w-[1050px] px-4 mt-14 pb-16">
         <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide uppercase">
           Tentative Programme Schedule
         </h1>
 
+        <p className="mt-8 text-lg md:text-xl font-semibold">To be updated</p>
+
+        {/* AMRIT-2025 programme, kept for reference until the 2026 schedule is
+            finalised. Inner {/_* DAY n *_/} markers were demoted to plain labels
+            so this stays a single JSX comment.
         <div className="overflow-x-auto mt-8">
           <table className="table w-full bg-white">
             <thead className="hidden">
@@ -20,7 +25,7 @@ export default function Schedule() {
             </thead>
 
             <tbody>
-              {/* DAY 1 */}
+              DAY 1
               <tr className="[&>*]:border border-black">
                 <td colSpan={2} className="bg-gray-100 font-bold">
                   DAY1: 22 December, 2025 (Silchar Campus)
@@ -58,7 +63,7 @@ export default function Schedule() {
                 <td>5:00 PM–6:00 PM IST</td>
               </tr>
 
-              {/* DAY 2 */}
+              DAY 2
               <tr className="[&>*]:border border-black">
                 <td colSpan={2} className="bg-gray-100 font-bold">
                   DAY2: 23 December, 2025
@@ -68,7 +73,7 @@ export default function Schedule() {
                 <td colSpan={2}>Site Seeing</td>
               </tr>
 
-              {/* DAY 3 */}
+              DAY 3
               <tr className="[&>*]:border border-black">
                 <td colSpan={2} className="bg-gray-100 font-bold">
                   DAY3: 24 December, 2025 (Diphu Campus)
@@ -96,8 +101,8 @@ export default function Schedule() {
             </tbody>
           </table>
         </div>
+        */}
       </div>
-      <br /><br />
       <Footer />
     </section>
   );

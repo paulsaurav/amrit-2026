@@ -8,12 +8,12 @@ const ConferenceTracks = () => {
     <><Helmet>
         <meta charSet="utf-8" />
         <title>Call For Paper|Amrit Conferences</title>
-        <link rel="canonical" href="https://amrit2025.amritconferences.in/call-for-paper" />
+        <link rel="canonical" href="https://amrit2026.amritconferences.in/call-for-paper" />
         <meta
           name="Authors are invited to submit research papers that present original
             and unpublished research in the following track areas which include
             and are not limited to: ADVANCED COMPUTING, MACHINE LEARNING, ROBOTICS, INTERNET TECHNOLOGIES"
-          content="Amrit-2025 Conference"
+          content="Amrit-2026 Conference"
         />
       </Helmet>
       <Header />

@@ -16,7 +16,41 @@ export default function Archive() {
         </p>
 
         {/* Cards */}
-        <div className="mt-10 grid md:grid-cols-2 gap-8">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* 2025 */}
+          <a
+            href="https://amrit2025.amritconferences.in/"
+            target="_blank"
+            rel="noreferrer"
+            className="block rounded-2xl p-6 md:p-8 shadow-lg bg-gradient-to-r from-[#CFFAE1] via-[#D7F4F0] to-[#CDE9FF]
+                       hover:shadow-xl transition"
+          >
+            <span className="inline-block px-3 py-1 rounded-full bg-white/80 text-sm font-semibold">
+              2025
+            </span>
+            <h2 className="mt-4 text-2xl md:text-3xl font-extrabold">AMRIT 2025</h2>
+            <p className="mt-3 text-black/80">
+              The most recent conference featuring cutting-edge research and
+              innovation
+            </p>
+
+            <div className="mt-8 flex items-center justify-between">
+              <span className="underline underline-offset-4">Visit Archive</span>
+              <svg
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M13 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+
           {/* 2024 */}
           <a
             href="https://amrit2024.amritconferences.in/"
@@ -30,8 +64,8 @@ export default function Archive() {
             </span>
             <h2 className="mt-4 text-2xl md:text-3xl font-extrabold">AMRIT 2024</h2>
             <p className="mt-3 text-black/80">
-              The most recent conference featuring cutting-edge research and
-              innovation
+              Building on our foundation with broader participation and deeper
+              research
             </p>
 
             <div className="mt-8 flex items-center justify-between">

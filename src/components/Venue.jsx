@@ -12,16 +12,7 @@ const Venue = () => {
             <div className="aspect-[4/3] overflow-hidden rounded-lg shadow">
               <img
                 src="/venue/venue1.jpeg"
-                alt="Venue 1"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-full md:w-1/2">
-            <div className="aspect-[4/3] overflow-hidden rounded-lg shadow">
-              <img
-                src="/venue/venue2.jpeg"
-                alt="Venue 2"
+                alt="Venue"
                 className="w-full h-full object-cover"
               />
             </div>

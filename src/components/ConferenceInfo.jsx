@@ -10,14 +10,14 @@ export default function ConferenceInfo() {
 
         {/* Conference Text */}
         <h2 className="text-blue-600 sm:text-sm md:text-lg font-bold uppercase leading-snug tracking-wide">
-          3rd International Conference on Advanced Computing, Machine Learning,<br />
+          4th International Conference on Advanced Computing, Machine Learning,<br />
           Robotics and Internet Technologies
         </h2>
 
-        <p className="text-xl font-bold mt-2 text-gray-900">(AMRIT-2025)</p>
+        <p className="text-xl font-bold mt-2 text-gray-900">(AMRIT-2026)</p>
 
         <p className="text-blue-600 text-lg font-semibold mt-1 ">
-          22-24 Dec, 2025
+          24-26 Dec, 2026 (25th Excluded)
         </p>
 
         <hr className="w-24 border-t-2 border-gray-400 mx-auto my-4" />
@@ -25,7 +25,7 @@ export default function ConferenceInfo() {
         <div className="text-sm md:text-lg leading-relaxed text-gray-800 font-bold">
           <p>Hybrid Mode</p>
           <p>Department of Computer Science</p>
-          <p>Assam University, Silchar & Diphu Campus</p>
+          <p>Assam University, Silchar</p>
           <p>Assam, India</p>
         </div>
 

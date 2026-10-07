@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 const lines = [
   'Department of Computer Science',
-  'Assam University, Silchar and Diphu Campus',
-  '22–24 December 2025',
+  'Assam University, Silchar',
+  '24–26 December 2026 (25th Excluded)',
 ];
 
 export default function HeroTitleBlock() {
@@ -19,7 +19,7 @@ export default function HeroTitleBlock() {
   return (
     <div className="text-white font-poppins text-left mx-auto max-w-fit leading-tight">
       <h1 className="text-[40px] md:text-[56px] font-extrabold text-center">
-        AMRIT–2025
+        AMRIT–2026
       </h1>
 
       <div className="relative h-[40px] md:h-[48px] mt-1">
