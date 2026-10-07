@@ -9,7 +9,7 @@ import Archive from './pages/Archive';
 import KeynoteSpeakers from './pages/KeynoteSpeakers';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
-// import CMTAcknowledgment from './pages/CMTAcknowledgment'; 
+import CMTAcknowledgment from './pages/CMTAcknowledgment'; 
 
 const App = () => {
   return (
