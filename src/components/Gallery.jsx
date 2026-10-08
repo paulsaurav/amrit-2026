@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
+
+const TOTAL_IMAGES = 17;
 
 const Gallery = () => {
+  const carouselRef = useRef(null);
+
+  // Scroll only the carousel horizontally; anchor links (#slideN) would
+  // scroll the whole page to bring the slide into view.
+  const goToSlide = (slideId) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    carousel.scrollTo({
+      left: carousel.clientWidth * (slideId - 1),
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="bg-white text-center py-12 px-4">
-      <div className="carousel max-w-[1175px] mx-auto">
-        {Array.from({ length: 9 }).map((_, index) => {
+      <div ref={carouselRef} className="carousel max-w-[1175px] mx-auto">
+        {Array.from({ length: TOTAL_IMAGES }).map((_, index) => {
           const slideId = index + 1;
-          const prevSlide = slideId === 1 ? 9 : slideId - 1;
-          const nextSlide = slideId === 9 ? 1 : slideId + 1;
+          const prevSlide = slideId === 1 ? TOTAL_IMAGES : slideId - 1;
+          const nextSlide = slideId === TOTAL_IMAGES ? 1 : slideId + 1;
 
           return (
             <div
@@ -21,12 +36,22 @@ const Gallery = () => {
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                <a href={`#slide${prevSlide}`} className="btn btn-circle">
+                <button
+                  type="button"
+                  onClick={() => goToSlide(prevSlide)}
+                  className="btn btn-circle"
+                  aria-label="Previous slide"
+                >
                   ❮
-                </a>
-                <a href={`#slide${nextSlide}`} className="btn btn-circle">
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goToSlide(nextSlide)}
+                  className="btn btn-circle"
+                  aria-label="Next slide"
+                >
                   ❯
-                </a>
+                </button>
               </div>
             </div>
           );

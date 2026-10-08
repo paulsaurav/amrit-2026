@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const lines = [
   'Department of Computer Science',
   'Assam University, Silchar',
-  '24–26 December 2026 (25th Excluded)',
+  '23–24 December 2026',
 ];
 
 export default function HeroTitleBlock() {

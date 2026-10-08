@@ -17,7 +17,7 @@ export default function ConferenceInfo() {
         <p className="text-xl font-bold mt-2 text-gray-900">(AMRIT-2026)</p>
 
         <p className="text-blue-600 text-lg font-semibold mt-1 ">
-          24-26 Dec, 2026 (25th Excluded)
+          23-24 Dec, 2026
         </p>
 
         <hr className="w-24 border-t-2 border-gray-400 mx-auto my-4" />

@@ -83,7 +83,7 @@ export default function Registration() {
           <li>Paper Submission Last Date: 10th December, 2026</li>
           <li>Notification of Acceptance: 15th December, 2026</li>
           <li>Authors Registration Deadline: 20th December, 2026</li>
-          <li>Conference Dates: 24–26, December, 2026 (25th Excluded)</li>
+          <li>Conference Dates: 23–24 December, 2026</li>
         </ul>
       </div>
       <br />
