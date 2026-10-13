@@ -1,20 +1,19 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-/* Committee members for AMRIT-2025, kept for reference until the 2026 committee is announced.
 const people = [
   {
     role: "Chief Patron",
     name: "Prof. Rajive Mohan Pant",
     title: "Vice-Chancellor, Assam University, Silchar",
-    img: "/committee/vc.webp", // replace with real path or URL
+    img: "/committee/vc.webp",
     profileHref: "#",
   },
   {
     role: "Co-Patron",
-    name: "Prof. Karabi Dutta Choudhury",
+    name: "Prof. Atri Deshamukha",
     title: "Dean, AESoPS, Assam University, Silchar",
-    img: "/committee/dean-maam.jpeg",
+    img: "/committee/Prof.Atri.jpg",
     profileHref: "#",
   },
   {
@@ -27,48 +26,20 @@ const people = [
   },
   {
     role: "Organising Chair cum Convener",
-    name: "Dr. Bishwa Ranjan Roy",
-    title:
-      "Associate Professor, Department of Computer Science, Assam University, Silchar",
-    img: "/committee/biswa-sir.jpeg",
-    profileHref: "#",
-  },
-  {
-    role: "Publication Chair",
-    name: "Dr. Somnath Mukhopadhyay",
-    title:
-      "Assistant Professor, Department of Computer Science and Engineering,\nAssam University, Silchar",
-    img: "/committee/somnath-sir.jpeg",
+    name: "Dr. Rahul Kumar Chawda",
+    title: "Department of Computer Science, Assam University, Silchar",
+    img: "/committee/rahul.k.jpg",
     profileHref: "#",
   },
 ];
-*/
 
-/* Committee members for AMRIT-2025, kept for reference until the 2026 committee is announced.
 const lists = {
-  technicalChairs: [
-    "Prof. Ranjit Singha, AUDC",
-    "Prof. Ajoy Kr. Khan, MZU",
-    "Dr Somen Debnath, TU",
-    "Dr. Tapodhir Acherjee, AUS",
-    "Dr. Subrata Hazarika, AUDC",
-    "Dr. P.K. Paul, Raiganj University",
-    "Dr. Sadhan Gope, NITA",
-    "Dr. Ajit Kr. Tamuli, AUDC",
-    "Dr. Santosh Satapathy, PDEU",
-    "Dr. John Carlo Torres, LPU",
-  ],
-  publicityChairs: [
-    "Dr. R. Chawnsangpuii, MZU",
-    "Dr. Arnab Majhi, NEHU",
-    "Dr. Anirban Roy, AUDC",
-    "Dr. Indika Devi, IGNTU",
-    "Dr. Arnab Paul, AUS",
-    "Dr. Satyabrata Nath, VIT Bhopal",
-    "Dr. Abhijit Paul, SVU",
-    "Dr. Ishita Chakraborty, RVU",
-    "Dr. Munmi Gogoi, GLA Univ.",
-    "Dr. Rabindra Teron, AUDC",
+  publicationChair: ["Prof. Prodipto Das"],
+  jointOrganising: [
+    "Dr. Saptarshi Paul",
+    "Dr. Purnendu Das",
+    "Dr. Bishwa Ranjan Roy",
+    "Dr. Debasish Roy",
   ],
   localOrganising: [
     "Prof. B.S. Purkayastha",
@@ -80,12 +51,6 @@ const lists = {
     "Dr. B.S. Meena",
     "Dr. Sanju Das",
     "Mr. Nayanjyoti Majumder",
-  ],
-  jointOrganising: [
-    "Dr. Saptarshi Paul",
-    "Dr. Purnendu Das",
-    "Dr. Debasish Roy",
-    "Dr. Rahul Kumar Chawda",
   ],
   internationalAdvisory: [
     "Prof. Rajkumar Bhuyya, University of Melbourne, Australia",
@@ -140,6 +105,11 @@ const lists = {
     "Dr. Ananya Das, KC",
     "Dr. Ranjita Das, NIT Agartala",
     "Dr. Abhijit Paul, Amity University",
+    "Dr. O. Mema Devi, GCC",
+    "Dr. Kh. Raju Singha, NCC",
+    "Dr. Nitin Rajput, PDEU",
+    "Dr. Satyabrata Nath, VIT Bhopal",
+    "Dr. Suman Deb, NIT Agartala",
     "Dr. Arnab Paul, AUS",
     "Dr. Sourish Dhar, AUS",
     "Dr. Mousam Handique, AUS",
@@ -149,15 +119,9 @@ const lists = {
     "Dr. Ishita Chakraborty, RV University",
     "Dr. Munmi Gogoi, GLA University",
     "Dr. Abhijit Paul, GCC",
-    "Dr. O. Mema Devi, GCC",
-    "Dr. Kh. Raju Singha, NCC",
-    "Dr. Nitin Rajput, PDEU",
-    "Dr. Satyabrata Nath, VIT Bhopal",
-    "Dr. Suman Deb, NIT Agartala",
     "Dr. R. Chawngsangpuii, MZU",
   ],
 };
-*/
 
 function RoleLine({ role }) {
   return (
@@ -168,12 +132,27 @@ function RoleLine({ role }) {
   );
 }
 
+function initials(name) {
+  return name
+    .replace(/^(Prof|Dr|Mr|Ms|Mrs)\.\s*/, "")
+    .split(/s+/)
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("");
+}
+
 function LeaderItem({ p }) {
   return (
     <div className="flex items-start gap-5">
       <div className="avatar">
         <div className="w-20 h-20 md:w-24 md:h-24 rounded-full ring ring-offset-2 ring-base-200 overflow-hidden">
-          <img src={p.img} alt={p.name} className="object-cover w-full h-full" />
+          {p.img ? (
+            <img src={p.img} alt={p.name} className="object-cover w-full h-full" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-blue-600 text-white text-2xl font-bold">
+              {initials(p.name)}
+            </div>
+          )}
         </div>
       </div>
       <div className="flex-1 text-black">
@@ -245,37 +224,30 @@ export default function CommitteePage() {
   </h1>
 </div>
       <div className="max-w-6xl mx-auto px-4">
-        <p className="text-lg md:text-xl font-semibold">To be updated</p>
-
-        {/* Committee members for AMRIT-2025, kept for reference until the 2026
-            committee is announced. Inner JSX comment markers were demoted to
-            plain labels so this stays a single comment.
-        Leadership
+        {/* Leadership */}
         <div className="space-y-12">
           {people.map((p) => (
             <LeaderItem key={p.role} p={p} />
           ))}
         </div>
 
-        Row 1: Technical + Publicity
-        <div className="grid md:grid-cols-2 gap-12 mt-16">
-          <ListBlock title="Technical Chairs" items={lists.technicalChairs} />
-          <ListBlock title="Publicity Chairs" items={lists.publicityChairs} />
-        </div>
-
-        Row 2: Local + Joint
-        <div className="grid md:grid-cols-2 gap-12 mt-16">
+        {/* Row 1: Publication + Joint + Local */}
+        <div className="grid md:grid-cols-3 gap-12 mt-16">
+          <ListBlock
+            title="Publication Chair"
+            items={lists.publicationChair}
+          />
+          <ListBlock
+            title="Joint Organising Chairs"
+            items={lists.jointOrganising}
+          />
           <ListBlock
             title="Local Organising Members"
             items={lists.localOrganising}
           />
-          <ListBlock
-            title="Joint Orginising Chairs"
-            items={lists.jointOrganising}
-          />
         </div>
 
-        Row 3: International Advisory → 1 col center
+        {/* Row 2: International Advisory → 1 col center */}
         <div className="mt-16">
           <ListBlock
             title="International Advisory Committee"
@@ -284,7 +256,7 @@ export default function CommitteePage() {
           />
         </div>
 
-        Row 4: National Advisory → 2 col center
+        {/* Row 3: National Advisory → 2 col center */}
         <div className="mt-16">
           <TwoColList
             title="National Advisory Committee"
@@ -292,14 +264,13 @@ export default function CommitteePage() {
           />
         </div>
 
-        Row 5: Technical Programme → 2 col center
+        {/* Row 4: Technical Programme → 2 col center */}
         <div className="mt-16">
           <TwoColList
             title="Technical Programme Committee"
             items={lists.tpc}
           />
         </div>
-        */}
       </div>
       <br /><br />
       <Footer />

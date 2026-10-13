@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const items = [
   " Paper submission is open",
   " Paper submission closes Dec 10, 2026",
-  " Registration closes Dec 20, 2026",
+  " Registration closes Dec 18, 2026",
   " Conference: Dec 23–24, 2026 (Assam University, Silchar)",
 ];
 

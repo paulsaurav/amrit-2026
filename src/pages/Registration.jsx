@@ -32,17 +32,17 @@ export default function Registration() {
             <tbody>
               <tr className="[&>*]:border [&>*]:border-base-300">
                 <td>Student/Scholar (Assam University, Silchar)</td>
-                <td>Rs. 5000</td>
+                <td>Rs. 8000</td>
                 <td>Not applicable</td>
               </tr>
               <tr className="[&>*]:border [&>*]:border-base-300">
                 <td>Student/Scholar (Other Universities/Institutes)</td>
-                <td>Rs. 6000</td>
-                <td>$100</td>
+                <td>Rs. 8000</td>
+                <td>$150</td>
               </tr>
               <tr className="[&>*]:border [&>*]:border-base-300">
                 <td>Academia/Industry</td>
-                <td>Rs. 8000</td>
+                <td>Rs. 10,000</td>
                 <td>$200</td>
               </tr>
             </tbody>
@@ -52,8 +52,7 @@ export default function Registration() {
         {/* PUBLICATION */}
         <h2 className="mt-12 text-xl font-extrabold uppercase">Publication</h2>
         <p className="mt-3">
-          1. The conference proceeding will be published either in IEEE or Springer. <br />
-          2. Selected papers will be invited to submit in the <b>Innovations in Systems and Software Engineering: A NASA Journal, Special Issue</b>
+          The conference proceeding will be published in Springer or a Special Issue of a Journal.
         </p>
 
         {/* PAPER SUBMISSION */}
@@ -82,7 +81,7 @@ export default function Registration() {
         <ul className="mt-4 list-disc pl-6 space-y-2">
           <li>Paper Submission Last Date: 10th December, 2026</li>
           <li>Notification of Acceptance: 15th December, 2026</li>
-          <li>Authors Registration Deadline: 20th December, 2026</li>
+          <li>Authors Registration Deadline: 15th–18th December, 2026</li>
           <li>Conference Dates: 23–24 December, 2026</li>
         </ul>
       </div>
