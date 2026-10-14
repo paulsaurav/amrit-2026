@@ -9,7 +9,8 @@ import Archive from './pages/Archive';
 import KeynoteSpeakers from './pages/KeynoteSpeakers';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
-import CMTAcknowledgment from './pages/CMTAcknowledgment'; 
+import CMTAcknowledgment from './pages/CMTAcknowledgment';
+import PaperSubmission from './pages/PaperSubmission';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Route path="/archive" element={<Archive />} />
       <Route path="/keynote-speakers" element={<KeynoteSpeakers />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/paper-submission" element={<PaperSubmission />} />
     </Routes>
     </>
   );

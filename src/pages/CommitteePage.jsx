@@ -31,6 +31,27 @@ const people = [
     img: "/committee/rahul.k.jpg",
     profileHref: "#",
   },
+  {
+    role: "Technical Chair",
+    name: "Dr. Purnendu Das",
+    title: "Department of Computer Science, Assam University, Silchar",
+    img: "/committee/prd.jpg",
+    profileHref: "#",
+  },
+  {
+    role: "Invited Technical Chair",
+    name: "Dr. Munsifa Khan",
+    title: "Assam Skill University, Mangaldai",
+    img: "/committee/dr.munsifa.jpg",
+    profileHref: "#",
+  },
+  {
+    role: "Invited Technical Chair",
+    name: "Mr. Amit Kumar Roy",
+    title: "Gurucharan University, Silchar",
+    img: "/committee/amit.kr.jpg",
+    profileHref: "#",
+  },
 ];
 
 const lists = {
@@ -105,7 +126,7 @@ const lists = {
     "Dr. Ananya Das, KC",
     "Dr. Ranjita Das, NIT Agartala",
     "Dr. Abhijit Paul, Amity University",
-    "Dr. O. Mema Devi, GCC",
+    "Dr. O. Mema Devi, GCU",
     "Dr. Kh. Raju Singha, NCC",
     "Dr. Nitin Rajput, PDEU",
     "Dr. Satyabrata Nath, VIT Bhopal",
@@ -118,7 +139,7 @@ const lists = {
     "Dr. Rajib Das, KC",
     "Dr. Ishita Chakraborty, RV University",
     "Dr. Munmi Gogoi, GLA University",
-    "Dr. Abhijit Paul, GCC",
+    "Dr. Abhijit Paul, GCU",
     "Dr. R. Chawngsangpuii, MZU",
   ],
 };
@@ -135,7 +156,7 @@ function RoleLine({ role }) {
 function initials(name) {
   return name
     .replace(/^(Prof|Dr|Mr|Ms|Mrs)\.\s*/, "")
-    .split(/s+/)
+    .split(/\s+/)
     .map((w) => w[0])
     .slice(0, 2)
     .join("");
@@ -202,7 +223,7 @@ function TwoColList({ title, items }) {
             <li key={i}>{t}</li>
           ))}
         </ol>
-        <ol className="list-decimal ml-6 space-y-1">
+        <ol className="list-decimal ml-6 space-y-1" start={left.length + 1}>
           {right.map((t, i) => (
             <li key={i + left.length}>{t}</li>
           ))}
@@ -227,7 +248,7 @@ export default function CommitteePage() {
         {/* Leadership */}
         <div className="space-y-12">
           {people.map((p) => (
-            <LeaderItem key={p.role} p={p} />
+            <LeaderItem key={p.name} p={p} />
           ))}
         </div>
 

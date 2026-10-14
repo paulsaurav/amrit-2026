@@ -3,6 +3,26 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 
+const tracks = [
+  "TRACK1: ADVANCED COMPUTING",
+  "TRACK2: MACHINE LEARNING",
+  "TRACK3: COMPUTING AND CRYPTOGRAPHY",
+  "TRACK4: INTERNET TECHNOLOGIES",
+];
+
+// Each row lists one topic per track, in the same order as `tracks`.
+const topics = [
+  ["High Performance Computing", "Artificial Intelligence", "Elliptic Curve Cryptography (ECC)", "Computer Networks"],
+  ["Data Mining", "Deep Learning", "Post-Quantum Cryptography (PQC)", "Internet of Things"],
+  ["Machine Translation", "Evolutionary Computing", "Cognitive Science", "VANET/MANET/Inter Vehicular Networks"],
+  ["Computer Vision", "Optimization Techniques", "Quantum Machine Learning", "Cyber Security Systems"],
+  ["Big Data Computing", "Explainable AI", "Homomorphic Encryption", "Sensor Technologies"],
+  ["Cloud Computing", "Medical & Healthcare Applications", "Cryptography in Blockchain", "Future Internet"],
+  ["Bioinformatics & Genetic Engineering", "Machine Learning Systems", "Cryptography in Network Security", "Wireless and Mobile Networks"],
+  ["Renewable Energy Technologies", "Generative AI", "Cryptanalysis, Vulnerabilities & Attacks", "5G/6G Technologies"],
+  ["Software Technologies", "Large Language Models (LLMs)", "Lattice based Cryptography", "Drones Technology"],
+];
+
 const ConferenceTracks = () => {
   return (
     <><Helmet>
@@ -12,7 +32,7 @@ const ConferenceTracks = () => {
         <meta
           name="Authors are invited to submit research papers that present original
             and unpublished research in the following track areas which include
-            and are not limited to: ADVANCED COMPUTING, MACHINE LEARNING, ROBOTICS, INTERNET TECHNOLOGIES"
+            and are not limited to: ADVANCED COMPUTING, MACHINE LEARNING, COMPUTING AND CRYPTOGRAPHY, INTERNET TECHNOLOGIES"
           content="Amrit-2026 Conference"
         />
       </Helmet>
@@ -32,90 +52,104 @@ const ConferenceTracks = () => {
           <br />
           <div className="overflow-x-auto rounded-box border border-base-content/5 bg-white">
             <table className="table bg-white">
-              {/* head */}
               <thead>
                 <tr>
                   <th></th>
-                  <th className="text-gray-800">TRACK1: ADVANCED COMPUTING</th>
-                  <th className="text-gray-800">TRACK2: MACHINE LEARNING</th>
-                  <th className="text-gray-800">TRACK3: ROBOTICS</th>
-                  <th className="text-gray-800">
-                    TRACK4: INTERNET TECHNOLOGIES
-                  </th>
+                  {tracks.map((t) => (
+                    <th key={t} className="text-gray-800">{t}</th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                {/* row 1 */}
+                {topics.map((row, i) => (
+                  <tr key={i}>
+                    <th>{i + 1}</th>
+                    {row.map((topic) => (
+                      <td key={topic}>{topic}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h2 className="text-2xl font-bold mt-16 text-gray-900 text-center">
+            PREVIOUS PUBLICATIONS
+          </h2>
+          <br />
+          <div className="overflow-x-auto rounded-box border border-base-content/5 bg-white">
+            <table className="table bg-white">
+              <thead>
                 <tr>
-                  <th>1</th>
-                  <td>High Performance Computing</td>
-                  <td>Artificial Intelligence</td>
-                  <td>Control and Automation</td>
-                  <td>Quantum Cryptography</td>
+                  <th className="text-gray-800">Edition</th>
+                  <th className="text-gray-800">Publication Title &amp; Series</th>
+                  <th className="text-gray-800">Details &amp; Volume</th>
                 </tr>
-                {/* row 2 */}
+              </thead>
+              <tbody>
                 <tr>
-                  <th>2</th>
-                  <td>Data Mining</td>
-                  <td>Deep Learning</td>
-                  <td>Human Computer Interaction</td>
-                  <td>Internet of Things</td>
+                  <td className="whitespace-nowrap">
+                    <span className="font-semibold">AMRIT 2023</span>
+                    <br />
+                    (1st Edition)
+                  </td>
+                  <td>
+                    Advanced Computing, Machine Learning, Robotics and Internet
+                    Technologies
+                    <br />
+                    <span className="font-semibold">Series:</span> Communications
+                    in Computer and Information Science (CCIS, Volume 1953)
+                  </td>
+                  <td>
+                    Includes 47 accepted papers (20 full, 27 short) chosen from
+                    110 submissions.
+                    <br />
+                    <a className="link link-primary" href="https://link.springer.com/book/10.1007/978-3-031-47221-3" target="_blank" rel="noopener noreferrer">Volume 1</a>
+                    {" | "}
+                    <a className="link link-primary" href="https://link.springer.com/book/10.1007/978-3-031-47224-4" target="_blank" rel="noopener noreferrer">Volume 2</a>
+                  </td>
                 </tr>
-                {/* row 3 */}
                 <tr>
-                  <th>3</th>
-                  <td>Machine Translation</td>
-                  <td>Evolutionary Computing</td>
-                  <td>Cognitive Science</td>
-                  <td>VANET/MANET/WSN</td>
+                  <td className="whitespace-nowrap">
+                    <span className="font-semibold">AMRIT 2024</span>
+                    <br />
+                    (2nd Edition)
+                  </td>
+                  <td>
+                    Advanced Computing, Machine Learning, Robotics and Internet
+                    Technologies
+                    <br />
+                    <span className="font-semibold">Series:</span> Advances in
+                    Computer Science Applications and Research (ACSAR, Volume 7)
+                  </td>
+                  <td>
+                    A two-volume set comprising 61 papers (47 full, 14 short)
+                    selected out of 274 initial submissions.
+                    <br />
+                    <a className="link link-primary" href="https://link.springer.com/book/9783032317810" target="_blank" rel="noopener noreferrer">Volume 1</a>
+                    {" | "}
+                    <a className="link link-primary" href="https://link.springer.com/book/9783032317773" target="_blank" rel="noopener noreferrer">Volume 2</a>
+                  </td>
                 </tr>
-                {/* row 4 */}
                 <tr>
-                  <td>4</td>
-                  <td>Computer Vision</td>
-                  <td>Optimization Techniques</td>
-                  <td>Generative AI</td>
-                  <td>Cyber Security</td>
-                </tr>
-                {/* row 5 */}
-                <tr>
-                  <td>5</td>
-                  <td>Big Data Computing</td>
-                  <td>Bioinformatics</td>
-                  <td>Augmented/Virtual Reality</td>
-                  <td>Cyber Physical Systems</td>
-                </tr>
-                {/* row 6 */}
-                <tr>
-                  <td>6</td>
-                  <td>Cloud Computing</td>
-                  <td>Medical Imaging</td>
-                  <td>Space and Underwater Robotics</td>
-                  <td>Future Internet</td>
-                </tr>
-                {/* row 7 */}
-                <tr>
-                  <td>7</td>
-                  <td>Green Computing</td>
-                  <td>Machine Learning Systems</td>
-                  <td>Healthcare Robotics</td>
-                  <td>Wireless and Mobile Networks</td>
-                </tr>
-                {/* row 8 */}
-                <tr>
-                  <td>8</td>
-                  <td>Renewable Energy Technologies</td>
-                  <td>Quantum Machine Learning</td>
-                  <td>Human Activity Recognition</td>
-                  <td>5G/6G Technologies</td>
-                </tr>
-                {/* row 9 */}
-                <tr>
-                  <td>9</td>
-                  <td>Software Technologies</td>
-                  <td>Speech & Signal Processing</td>
-                  <td>Semiconductor Technologies</td>
-                  <td>Drones Technology</td>
+                  <td className="whitespace-nowrap">
+                    <span className="font-semibold">AMRIT 2025</span>
+                    <br />
+                    (3rd Edition)
+                  </td>
+                  <td>
+                    Special Issue Selection
+                    <br />
+                    <span className="font-semibold">Journal:</span> Innovations
+                    in Systems and Software Engineering: A NASA Journal
+                    <br />
+                    and Springer ACSAR Series
+                  </td>
+                  <td>
+                    40 papers out of 245 accepted for publication in Springer
+                    ACSAR Series, and a few quality papers were selected for a
+                    Special Issue of a Springer journal.
+                  </td>
                 </tr>
               </tbody>
             </table>

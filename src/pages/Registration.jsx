@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -62,16 +63,12 @@ export default function Registration() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <p className="mt-3">Microsoft CMT Portal</p>
 
-          <a
-            href="https://cmt3.research.microsoft.com/AMRIT2025"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block mt-4"
+          <Link
+            to="/paper-submission"
+            className="btn btn-success uppercase shadow-md mt-4"
           >
-            <button className="btn btn-success uppercase shadow-md">
-              Paper Submission
-            </button>
-          </a>
+            Paper Submission
+          </Link>
         </div>
 
         {/* IMPORTANT DATES */}
