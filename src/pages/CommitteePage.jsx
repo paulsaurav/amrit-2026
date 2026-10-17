@@ -40,7 +40,7 @@ const people = [
   },
   {
     role: "Invited Technical Chair",
-    name: "Dr. Munsifa Khan",
+    name: "Dr. Munsifa Firdaus Khan Barbhuyan",
     title: "Assam Skill University, Mangaldai",
     img: "/committee/dr.munsifa.jpg",
     profileHref: "#",

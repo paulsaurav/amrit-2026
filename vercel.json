@@ -1,3 +1,7 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/cmt_acknowledgment", "destination": "/acknowledgment/cmt.html" },
+    { "source": "/acknowledgment/cmt", "destination": "/acknowledgment/cmt.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
