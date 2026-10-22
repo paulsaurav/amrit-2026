@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import HeroTitleBlock from "./HeroTitleBlock";
 
 export default function HeroSection() {
@@ -13,7 +12,7 @@ export default function HeroSection() {
       <div className="flex items-center h-full w-full">
         <div className="sm:px-10 md:px-40 lg:px-80">
           <HeroTitleBlock />
-          <Link to="/paper-submission" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-primary">PAPER SUBMISSION</Link>
+          <a href="https://cmt3.research.microsoft.com/AMRIT2026" target="_blank" rel="noopener noreferrer" className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl btn-primary">PAPER SUBMISSION</a>
         </div>
       </div>
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center px-4 text-blue-600 font-bold text-xl text-shadow-lg">
