@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import CMTAcknowledgment from './pages/CMTAcknowledgment';
 import PaperSubmission from './pages/PaperSubmission';
+import ForAuthors from './pages/ForAuthors';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <Route path="/keynote-speakers" element={<KeynoteSpeakers />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/paper-submission" element={<PaperSubmission />} />
+      <Route path="/for-authors" element={<ForAuthors />} />
     </Routes>
     </>
   );

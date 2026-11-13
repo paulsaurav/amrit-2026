@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -71,6 +72,13 @@ export default function Registration() {
             Paper Submission
           </a>
         </div>
+        <p className="mt-4">
+          Before submitting, please read the{" "}
+          <Link to="/for-authors" className="link link-primary font-semibold">
+            guidelines for authors
+          </Link>{" "}
+          and download the paper template.
+        </p>
 
         {/* IMPORTANT DATES */}
         <h2 className="mt-12 text-xl font-extrabold uppercase">
