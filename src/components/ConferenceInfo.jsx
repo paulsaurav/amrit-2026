@@ -5,7 +5,7 @@ export default function ConferenceInfo() {
         {/* Logos row */}
         <div className="flex items-center justify-around mb-6">
           <img src="/springer.jpg" alt="Springer" className="h-12 md:h-16" />
-          <img src="/ccis.png" alt="CCIS" className="h-10 md:h-14" />
+          <img src="/acsar.jpeg" alt="ACSAR" className="h-10 md:h-14" />
         </div>
 
         {/* Conference Text */}
